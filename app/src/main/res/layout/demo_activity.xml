@@ -46,7 +46,7 @@
                 android:id="@+id/radiobutton1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
+                android:checked="false"
                 android:text="360P" />
 
             <RadioButton
@@ -67,7 +67,7 @@
                 android:id="@+id/radiobutton4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false"
+                android:checked="true"
                 android:text="720P" />
         </RadioGroup>
 
@@ -82,14 +82,14 @@
                 android:id="@+id/orientationbutton1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false"
+                android:checked="true"
                 android:text="横屏" />
 
             <RadioButton
                 android:id="@+id/orientationbutton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
+                android:checked="false"
                 android:text="竖屏" />
         </RadioGroup>
 
@@ -184,14 +184,14 @@
                 android:id="@+id/autoStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false"
+                android:checked="true"
                 android:text="初始化完成后启动推流" />
 
             <CheckBox
                 android:id="@+id/print_debug_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false"
+                android:checked="true"
                 android:text="显示调试信息" />
         </LinearLayout>
 
@@ -211,7 +211,7 @@
                 android:id="@+id/frameRatePicker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="15" />
+                android:text="30" />
         </LinearLayout>
 
         <LinearLayout
@@ -231,7 +231,7 @@
                 android:id="@+id/videoBitratePicker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="800" />
+                android:text="2000" />
         </LinearLayout>
 
         <LinearLayout
