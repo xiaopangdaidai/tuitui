@@ -104,14 +104,14 @@
                 android:id="@+id/encode_hw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false"
+                android:checked="true"
                 android:text="硬编" />
 
             <RadioButton
                 android:id="@+id/encode_sw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
+                android:checked="false"
                 android:text="软编" />
 
             <RadioButton
@@ -133,14 +133,14 @@
                 android:id="@+id/encode_scene_default"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false"
+                android:checked="true"
                 android:text="通用模式" />
 
             <RadioButton
                 android:id="@+id/encode_scene_show_self"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
+                android:checked="false"
                 android:text="秀场模式" />
         </RadioGroup>
 
@@ -191,7 +191,7 @@
                 android:id="@+id/print_debug_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
+                android:checked="false"
                 android:text="显示调试信息" />
         </LinearLayout>
 

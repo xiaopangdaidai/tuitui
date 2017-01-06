@@ -47,9 +47,8 @@ public class NetMediaActivty extends AppCompatActivity implements View.OnClickLi
         net_startvedio = (Button)findViewById(R.id.btn_net_vedio);
         netlist = (ListView)findViewById(R.id.list_net);
 
-        final String[] sampleUrl = {"rtmp://live.hkstv.hk.lxdns.com/live/hks",
-                "http://playback.ks.zb.mi.com/record/live/107578_1467605748/hls/107578_1467605748.m3u8",
-                "http://cxy.kssws.ks-cdn.com/h265_56c26b7a7dc5f6043.mp4"};
+        final String[] sampleUrl = {"rtmp://cdn.kan0512.com/live/csztv1_sd",
+                "http://liveshow.kan0512.com/csztv1/playlist.m3u8"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,sampleUrl);
         netlist.setAdapter(adapter);

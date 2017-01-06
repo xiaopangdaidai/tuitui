@@ -425,6 +425,7 @@ public class CameraActivity extends Activity implements
                     Log.d(TAG, "KSY_STREAMER_CAMERA_INIT_DONE");
                     setCameraAntiBanding50Hz();
                     if (mAutoStart) {
+                        onSwitchCamera();
                         startStream();
                     }
                     break;

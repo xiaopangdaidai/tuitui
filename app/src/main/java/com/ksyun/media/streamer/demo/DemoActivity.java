@@ -23,6 +23,7 @@ public class DemoActivity extends Activity implements OnClickListener {
     private EditText mFrameRateEditText;
     private EditText mVideoBitRateEditText;
     private EditText mAudioBitRateEditText;
+    private RadioGroup mResolutionGroup;
     private RadioButton mRes360Button;
     private RadioButton mRes480Button;
     private RadioButton mRes540Button;
@@ -66,10 +67,10 @@ public class DemoActivity extends Activity implements OnClickListener {
         mRes360Button = (RadioButton) findViewById(R.id.radiobutton1);
         mRes480Button = (RadioButton) findViewById(R.id.radiobutton2);
         mRes540Button = (RadioButton) findViewById(R.id.radiobutton3);
-        mRes720Button = (RadioButton) findViewById(R.id.radiobutton4);
-        mLandscapeButton = (RadioButton) findViewById(R.id.orientationbutton1);
+         mLandscapeButton = (RadioButton) findViewById(R.id.orientationbutton1);
         mPortraitButton = (RadioButton) findViewById(R.id.orientationbutton2);
         mEncodeGroup = (RadioGroup) findViewById(R.id.encode_group);
+        mResolutionGroup = (RadioGroup) findViewById(R.id.resolution_group);
         mSWButton = (RadioButton) findViewById(R.id.encode_sw);
         mHWButton = (RadioButton) findViewById(R.id.encode_hw);
         mSW1Button = (RadioButton) findViewById(R.id.encode_sw1);
@@ -90,6 +91,25 @@ public class DemoActivity extends Activity implements OnClickListener {
             setEnableRadioGroup(mSceneGroup, true);
             setEnableRadioGroup(mProfileGroup, true);
         }
+
+        mResolutionGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.radiobutton1) {
+                    ((EditText) findViewById(R.id.videoBitratePicker)).setText("500");
+                } else if (checkedId == R.id.radiobutton2) {
+                    ((EditText) findViewById(R.id.videoBitratePicker)).setText("1000");
+                } else if (checkedId == R.id.radiobutton3) {
+                    ((EditText) findViewById(R.id.videoBitratePicker)).setText("1500");
+                } else {
+                    ((EditText) findViewById(R.id.videoBitratePicker)).setText("2000");
+                }
+                mVideoBitRateEditText = (EditText) findViewById(R.id.videoBitratePicker);
+                mVideoBitRateEditText.setInputType(InputType.TYPE_CLASS_NUMBER);
+            }
+        }
+        );
+
         mEncodeGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
